@@ -1,1 +1,1 @@
-Primeiro blog seguindo as aulas "codeng is for girls" com Djangogirls.
+Primeiro blog seguindo as aulas "coding is for girls" com Djangogirls.
