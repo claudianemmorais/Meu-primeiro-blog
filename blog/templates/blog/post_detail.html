@@ -13,15 +13,16 @@
             <h1><a href="/">Blog Girls in Programming</a></h1>
         </div>
         {% block content %}
-            {% for post in posts %}
-                <div class="post">
+            <div class="post">
+                {% if post.published_date %}
                     <div class="date">
-                        <p>published: {{ post.published_date }}</p>
+                        {{ post.published_date }}
                     </div>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
+                {% endif %}
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
         {% endblock %}
     </body>
 </html> 
+

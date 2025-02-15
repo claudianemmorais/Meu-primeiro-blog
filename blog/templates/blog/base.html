@@ -1,4 +1,3 @@
-{% extends 'blog/base.html' %}
 {% load static %}
 <html>
     <head>
@@ -12,16 +11,13 @@
         <div class="page-header">
             <h1><a href="/">Blog Girls in Programming</a></h1>
         </div>
-        {% block content %}
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>published: {{ post.published_date }}</p>
-                    </div>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
                 </div>
-            {% endfor %}
-        {% endblock %}
+            </div>
+        </div>
     </body>
 </html> 
